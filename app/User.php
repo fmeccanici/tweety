@@ -45,7 +45,8 @@ class User extends Authenticatable
 
         return Tweet::whereIn('user_id', $friends)
             ->orWhere('user_id', $this->id)
-            ->latest()->get();
+            ->latest()
+            ->paginate(50);
     }
 
     public function tweets()
@@ -55,7 +56,20 @@ class User extends Authenticatable
 
     public function getAvatarAttribute($value)
     {
-        return asset("storage/{$value}");
+        if (isset($value))
+        {
+            return asset("storage/{$value}");
+        } 
+        else
+        {
+            return asset('images\default-avatar.jpg');
+        }
+
+    }
+
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = bcrypt($value);
     }
 
     public function path($append = '')
