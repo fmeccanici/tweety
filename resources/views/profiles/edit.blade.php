@@ -47,13 +47,6 @@
                 Description
             </label>
 
-            {{-- <input 
-                class="border border-gray-400 p-2 w-full"
-                type="text"
-                name="description"
-                id="description"
-                value="{{ $user->description }}"
-            > --}}
             <textarea 
                 class="border border-gray-400 p-2 w-full"
                 name="description" 

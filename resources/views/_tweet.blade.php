@@ -18,10 +18,13 @@
             </a>
         </h5>
 
-        <p class="text-sm">
-            {{ $tweet->body }}
-        </p>
-        <img src="{{ $tweet->image }}" alt="">
+        <div>
+            <p class="text-sm">
+                {{ $tweet->body }}
+            </p>
+            <img src="{{ $tweet->image }}" alt="">
+        </div>
+
         
         <x-like-buttons :tweet="$tweet"/>
     </div>

@@ -22,7 +22,7 @@ class ProfilesController extends Controller
     }
 
     public function update(User $user)
-    {
+    {        
         $attributes = request()->validate([
             'username' => ['string', 'required', 'max:255', 'alpha_dash', Rule::unique('users')->ignore($user)], 
             'name' => ['string', 'required', 'max:255'],
