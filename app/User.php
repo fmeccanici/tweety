@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'username', 'name', 'avatar', 'email', 'password',
+        'username', 'name', 'avatar', 'email', 'password', 'description', 'banner'
     ];
 
     /**
@@ -53,6 +53,18 @@ class User extends Authenticatable
     public function tweets()
     {
         return $this->hasMany(Tweet::class)->latest();
+    }
+
+    public function getBannerAttribute($value)
+    {
+        if (isset($value))
+        {
+            return asset("storage/{$value}");
+        }
+        else 
+        {
+            return asset('images\default-profile-banner.jpg');
+        }
     }
 
     public function getAvatarAttribute($value)

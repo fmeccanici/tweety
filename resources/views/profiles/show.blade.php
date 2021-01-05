@@ -1,7 +1,7 @@
 <x-app>
     <header class="mb-6 relative">
         <div class="relative">
-            <img src="/images/default-profile-banner.jpg" alt="" class="mb-2">
+            <img src="{{ $user->banner }}" alt="" class="mb-2">
             <img 
                 src="{{ $user->avatar }}" 
                 alt=""
@@ -27,11 +27,8 @@
         </div>
         
         <p class="text-sm">
-            I am Floris, founder of MeccTech solutions. 
+            {{ $user->description }}
         </p>
-
-
-
 
     </header>
 
