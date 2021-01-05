@@ -41,12 +41,7 @@ class TweetsController extends Controller
                 'image' => null
             ]); 
         }
-        
-        
 
-        
-
-
-        return redirect()->route('home')->with('info', 'Tweet successfully posted!');
+        return redirect()->route('home')->with('success', 'Tweet successfully posted!');
     }
 }

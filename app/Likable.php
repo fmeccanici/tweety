@@ -33,7 +33,7 @@ trait Likable
 
         $like->delete();
 
-        return redirect('home');
+        return redirect()->route('home');
     }
 
     public function dislike($user = null)

@@ -35,4 +35,5 @@
     @include ('_timeline', [
         'tweets' => $tweets
     ])
+
 </x-app>
