@@ -31,7 +31,9 @@
 
         {{ $slot }}
     </div>
-
+    {{-- @include('flash-message') --}}
+    <x-flash-message></x-flash-message>
+    
     <script src="http://unpkg.com/turbolinks"></script>
 </body>
 </html>

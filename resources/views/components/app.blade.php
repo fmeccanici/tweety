@@ -17,7 +17,6 @@
                     @include ('_friends-list')
                 </div>
                 @endif
-                
             </div>
         </main>    
     </section>

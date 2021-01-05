@@ -27,16 +27,26 @@ class TweetsController extends Controller
         if (request('image'))
         {
             $attributes['image'] = request('image')->store('attached_images');
+            Tweet::create([
+                'user_id' => auth()->id(),
+                'body' => $attributes['body'],
+                'image' => $attributes['image']
+            ]);
+        }  
+        else
+        {
+            Tweet::create([
+                'user_id' => auth()->id(),
+                'body' => $attributes['body'],
+                'image' => null
+            ]); 
         }
         
-        Tweet::create([
-            'user_id' => auth()->id(),
-            'body' => $attributes['body'],
-            'image' => $attributes['image']
-        ]);
+        
+
         
 
 
-        return redirect()->route('home');
+        return redirect()->route('home')->with('info', 'Tweet successfully posted!');
     }
 }

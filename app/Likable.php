@@ -24,6 +24,18 @@ trait Likable
         ]);
     }
 
+    public function unlike($user = null)
+    {   
+        $like = Like::where([
+            ['user_id', '=' , $user->id], 
+            ['tweet_id', '=', $this->id]
+            ]);
+
+        $like->delete();
+
+        return redirect('home');
+    }
+
     public function dislike($user = null)
     {
         return $this->like($user, false);
