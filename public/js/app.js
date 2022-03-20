@@ -49886,8 +49886,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\laravel_tutorials\tweety\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\laravel_tutorials\tweety\resources\css\main.css */"./resources/css/main.css");
+__webpack_require__(/*! /home/fmeccanici/Documents/mecctech_solutions/tweety/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/fmeccanici/Documents/mecctech_solutions/tweety/resources/css/main.css */"./resources/css/main.css");
 
 
 /***/ })
